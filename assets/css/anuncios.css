@@ -1,0 +1,301 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 30, 2022, 12:06:11 AM
+    Author     : josemorales
+*/
+
+.site-main, .clasificado-main {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.clasificado-mainx {
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    word-break: break-word;
+}
+
+@media all and (min-width:1024px) {
+  [class*=woocommerce] main.site-content article.clasificado,
+  [class*=woocommerce] main.site-main article.clasificado,
+  .clasificado-main div.clasificado,
+  [class*=woocommerce] .clasificado-main article.clasificado{
+    width: 30%!important;
+    padding: 0 5.0% 0.992em 0!important;
+    /*clear: none!important;*/
+    float: left;
+    margin-bottom: 30px;
+  }
+  [class*=woocommerce] main.site-content article.clasificado:nth-child(3n),
+  [class*=woocommerce] main.site-main article.clasificado:nth-child(3n),
+  .clasificado-main div.clasificado:nth-child(3n),
+  [class*=woocommerce] .clasificado-main article.clasificado:nth-child(3n){
+    margin-right:0px!important;
+    padding-right:0px!important;
+  }
+  [class*=woocommerce] main.site-content article.clasificado:nth-child(3n+1),
+  [class*=woocommerce] main.site-content article.clasificado:nth-child(3n+1),
+  div.clasificado-main div.clasificado:nth-child(3n+1),
+  [class*=woocommerce] .clasificado-main article.clasificado:nth-child(3n+1){
+    clear: both!important;
+    float: left; /*NEW*/
+  }
+}
+
+h2.entry-title {
+	color: #353664;
+	font-size: 20px;
+}
+
+.vermas {
+    padding: 10px 20px;
+    display: inline-block;
+    color: #FFFFFF!important;
+    background-color: #353664;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+
+[class *="wd-spacing-"] > [class *="col"] {
+    margin-bottom: 20px;
+    padding-right: calc(20px / 2);
+    padding-left: calc(20px / 2)
+}
+
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width:50%
+}
+
+
+@media (min-width: 769px) {
+  .col-md-4 {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .col-lg {
+        flex-basis: 0%;
+        flex-grow: 1;
+        max-width:100%
+    }
+    
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width:33.333333%
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+  .thumbnail a span.custom-lightbox img {
+    max-width: 100% !important;
+  }
+}
+
+
+
+@media (min-width: 1025px) {
+  .grid-75 {
+      float: left;
+      width: 75%;
+  }
+  .grid-25 {
+    float: left;
+    width: 25%;
+  }
+}
+.grid-parent {
+    padding-left: 0;
+    padding-right: 0;
+}
+#contentmain.site-content {
+	padding-top: 0;
+}
+.metadate {
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+
+img.attachment-full.size-full.wp-post-image.entered.lazyloaded, img.attachment-full.size-full.wp-post-image {
+  border: 1px solid #000
+}
+
+.filtercat {
+  margin: 20px 0;
+}
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item, .clasificadox { width: 33.33%; margin: 0; }
+/* 2 columns */
+.grid-item--width2 { width: 40%; }
+
+/* clearfix */
+.clasificado-mainss:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clasificado-main ~ .heateor_sss_vertical_sharing {
+  z-index: 1000;
+}
+#listofoptions {
+  width: 250px;
+}
+.entry-title .linkclasi {
+  color: #353664 !important;
+}
+.clasificado .posted-on {
+  float: right;
+  width: 100%;
+  text-align: right;
+  position: relative;
+}
+
+
+/**** POST NAV ****/
+.single .post-nav {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-top: 1.5625rem;
+}
+.single .post-nav .nav-content {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.single .post-nav, .single .post-nav .nav-content {
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.single .post-nav .nav-previous {
+    margin-right: auto;
+}
+.single .post-nav>div {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+}
+.single .post-nav .nav-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+.single #main .post-nav a {
+    color: inherit;
+    display: block;
+}
+.single .post-nav .nav-previous .nav-content span {
+    /*padding-right: 20px;*/
+}
+.single .post-nav .nav-previous .nav-content img {
+    margin-right: 1.25rem;
+}
+.single .post-nav .nav-next .nav-content img {
+    margin-left: 1.25rem;
+}
+.single .post-nav img {
+    border-radius: 2px;
+}
+
+.single .post-nav .nav-next .nav-title {
+    text-align: right;
+}
+.single .post-nav .nav-next .nav-content {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.txt{
+  max-width: 250px;
+}
+
+
+.center-block.loadingp {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.loader {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #eceaea;
+    z-index: 9;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+.visible {
+    visibility: visible !important;
+}
+.oculto {
+    display: none !important;
+}
+.visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute!important;
+    width: 1px!important;
+    height: 1px!important;
+    padding: 0!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    clip: rect(0,0,0,0)!important;
+    white-space: nowrap!important;
+    border: 0!important;
+}
+
+
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border .75s linear infinite;
+}
