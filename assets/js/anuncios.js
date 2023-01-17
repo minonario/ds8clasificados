@@ -8,7 +8,7 @@ jQuery( function ( $ ) {
   
     lightGallery(document.getElementById('main'), {
         plugins: [lgZoom],
-        selector: '.custom-lightbox',
+        selector: '.custom-lightbox_none',
         controls: false,
         enableDrag: false,
         pager: false
