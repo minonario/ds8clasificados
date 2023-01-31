@@ -109,6 +109,9 @@ h2.entry-title {
   .thumbnail a span.custom-lightbox img {
     max-width: 100% !important;
   }
+  div.clasificado h2.entry-title {
+      margin-bottom: 25px;
+  }
 }
 
 
@@ -299,3 +302,4 @@ img.attachment-full.size-full.wp-post-image.entered.lazyloaded, img.attachment-f
   border-radius: 50%;
   animation: spinner-border .75s linear infinite;
 }
+
