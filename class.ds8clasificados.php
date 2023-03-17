@@ -86,7 +86,7 @@ class DS8Clasificados {
               'type' => 'clasificado',
               'perpage' => 3
           ), $atts ) );
-          $output = '<div class="clasificado-main">';
+          $output = '<div class="grid">';
           
           echo '<div class="loading visible loader oculto">
               <div role="status" class="spinner-border center-block loadingp">
@@ -231,7 +231,7 @@ class DS8Clasificados {
         */
         public static function wpdev_filter_post_thumbnail_html( $html, $pid, $post_thumbnail_id, $size, $attr ) {
 
-                if ( ! empty( $attr[ 'itemprop' ] ) && $attr['itemprop'] === 'image' ) {
+                if ( ! empty( $attr[ 'itemprop' ] ) && $attr['itemprop'] === 'image' && is_singular( 'clasificado' ) ) {
                       
                       $image = wp_get_attachment_image_src( $post_thumbnail_id, "full" );
 
@@ -358,19 +358,20 @@ class DS8Clasificados {
 
         public static function ds8_clasificados_javascript(){
           
-            wp_enqueue_style('ds8clasificado-css', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lightgallery-bundle.min.css', array(), DS8CLASIFICADOS_VERSION);
+            //wp_enqueue_style('ds8clasificado-css', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lightgallery-bundle.min.css', array(), DS8CLASIFICADOS_VERSION);
             wp_enqueue_style('anuncios-css', plugin_dir_url( __FILE__ ) . 'assets/css/anuncios.css', array(), DS8CLASIFICADOS_VERSION);
-            wp_register_script( 'front-ds8clasificado-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lightgallery.min.js', array('jquery'), DS8CLASIFICADOS_VERSION, true );
-            wp_enqueue_script( 'front-ds8clasificado-js' );
+            // 24022023 JLMA
+            //wp_register_script( 'front-ds8clasificado-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lightgallery.min.js', array('jquery'), DS8CLASIFICADOS_VERSION, true );
+            //wp_enqueue_script( 'front-ds8clasificado-js' );
             
-            wp_enqueue_script( 'front-lgzoom-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lg-zoom.min.js', array('jquery','front-ds8clasificado-js'), DS8CLASIFICADOS_VERSION, true );
-            wp_enqueue_script( 'front-thumbnail-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lg-thumbnail.min.js', array('jquery','front-ds8clasificado-js'), DS8CLASIFICADOS_VERSION, true );
+            //wp_enqueue_script( 'front-lgzoom-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lg-zoom.min.js', array('jquery','front-ds8clasificado-js'), DS8CLASIFICADOS_VERSION, true );
+            //wp_enqueue_script( 'front-thumbnail-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lg-thumbnail.min.js', array('jquery','front-ds8clasificado-js'), DS8CLASIFICADOS_VERSION, true );
             
             //wp_register_script( 'masonry-pkgd-min-js', plugin_dir_url( __FILE__ ) . 'assets/js/masonry.pkgd.min.js', array('jquery'), DS8CLASIFICADOS_VERSION, true );
             //wp_enqueue_script( 'masonry-pkgd-min-js' );
             
-            wp_register_script( 'anuncios.js', plugin_dir_url( __FILE__ ) . 'assets/js/anuncios.js', array('jquery','jquery-ui-tooltip'), DS8CLASIFICADOS_VERSION, true );
-            wp_enqueue_script( 'anuncios.js' );
+            //wp_register_script( 'anuncios.js', plugin_dir_url( __FILE__ ) . 'assets/js/anuncios.js', array('jquery','jquery-ui-tooltip'), DS8CLASIFICADOS_VERSION, true );
+            //wp_enqueue_script( 'anuncios.js' );
 
         }
 

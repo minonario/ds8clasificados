@@ -75,7 +75,7 @@
                                         </div>
 
                                           <?php
-                                              echo render_image();
+                                              //echo render_image();
                                           ?>
                                           
                                           <?php
@@ -97,9 +97,9 @@
 		</main><!-- #content .site-content -->
 
 	</div><!-- #primary .content-area -->
-        <div class="secundario">
+        
             <?php get_sidebar(); ?>
-        </div>
+        
 
 </div><!-- END .si-container -->
 
