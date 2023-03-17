@@ -112,6 +112,12 @@ h2.entry-title {
   div.clasificado h2.entry-title {
       margin-bottom: 25px;
   }
+  .clasificado .entry-media img {
+      border-radius: 0;
+      margin-left: inherit;
+      margin-right: inherit;
+      max-width: 100%;
+  }
 }
 
 
@@ -162,8 +168,15 @@ img.attachment-full.size-full.wp-post-image.entered.lazyloaded, img.attachment-f
 .clasificado-main ~ .heateor_sss_vertical_sharing {
   z-index: 1000;
 }
-#listofoptions {
-  width: 250px;
+
+select.filtercat {
+  max-width: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  select.filtercat {
+    width: 10rem;
+  }
 }
 .entry-title .linkclasi {
   color: #353664 !important;
