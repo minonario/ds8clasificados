@@ -41,7 +41,6 @@ class DS8Clasificados {
 	}
 
         public static function get_custom_post_type_template( $archive_template ) {
-             global $post;
 
              if ( is_post_type_archive ( 'clasificado' ) ) {
                   $archive_template = dirname( __FILE__ ) . '/archive.php';
@@ -54,7 +53,7 @@ class DS8Clasificados {
 
             
             // Is this a "my-custom-post-type" post?
-            if ($post->post_type == "clasificado"){
+            if ($post->post_type === "clasificado"){
 
                 //Your plugin path 
                 $plugin_path = plugin_dir_path( __FILE__ );
@@ -103,9 +102,7 @@ class DS8Clasificados {
               jQuery('.entry-content').find('.visible').removeClass('oculto');
               
               const params = new URLSearchParams(window.location.search);
-              const url = window.location.href.split('?')[0];
-              
-              console.log('destination='+url);
+              const url = window.location.href.split('?')[0].replace(/\/page\/[\n\S]+/g, '');
               
               if( this.value !== '-1' ){
                 window.location=url+'?clasificado_cat='+this.value
@@ -129,7 +126,7 @@ class DS8Clasificados {
           $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
           $args = array(
               'post_type' => $type,
-              'posts_per_page' => -1,
+              'posts_per_page' => 3,
               'paged' => $paged
           );
           
