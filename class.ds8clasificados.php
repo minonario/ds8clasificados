@@ -183,7 +183,7 @@ class DS8Clasificados {
 
 
                          $output .= sprintf(
-                                      '<h2 class="entry-title" itemprop="headline"><a href="%2$s" class="linkclasi" title="%1$s" rel="bookmark">%1$s</a></h2>',
+                                      '<h4 class="entry-title" itemprop="headline"><a href="%2$s" class="linkclasi" title="%1$s" rel="bookmark">%1$s</a></h4>',
                                       get_the_title(),
                                       esc_url( ds8_entry_get_permalink() )
                               );
