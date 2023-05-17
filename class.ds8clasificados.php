@@ -356,7 +356,10 @@ class DS8Clasificados {
         public static function ds8_clasificados_javascript(){
           
             //wp_enqueue_style('ds8clasificado-css', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lightgallery-bundle.min.css', array(), DS8CLASIFICADOS_VERSION);
-            wp_enqueue_style('anuncios-css', plugin_dir_url( __FILE__ ) . 'assets/css/anuncios.css', array(), DS8CLASIFICADOS_VERSION);
+            global $post;
+            if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'ds8clasificado') || 'clasificado' == get_post_type() ) {
+              wp_enqueue_style('anuncios-css', plugin_dir_url( __FILE__ ) . 'assets/css/anuncios.css', array(), DS8CLASIFICADOS_VERSION);
+            }
             // 24022023 JLMA
             //wp_register_script( 'front-ds8clasificado-js', plugin_dir_url( __FILE__ ) . 'assets/lightGallery/lightgallery.min.js', array('jquery'), DS8CLASIFICADOS_VERSION, true );
             //wp_enqueue_script( 'front-ds8clasificado-js' );
